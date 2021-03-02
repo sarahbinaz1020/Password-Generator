@@ -54,40 +54,25 @@ if (userLowercase === true) {
   }
 //Algo for password generation goes below
 
-var getRandomItem = bigArrayOfPossibilities[Math.floor(Math.random() * bigArrayOfPossibilities.length)];
-console.log(getRandomItem);
+var generatePassword = bigArrayOfPossibilities[Math.floor(Math.random() * bigArrayOfPossibilities.length)];
+
 // run 
-function getRandomItem() {
+function generatePassword() {
 for(let i = 0; i < userPassLength.length; i++); 
 return password.slice(0, userPassLength);
 } 
+// var writePassword = generatePassword;
+
+// Write password to the #password input
+// function writePassword() {
+  var passwordText = document.querySelector("#password")
+  passwordText.value = password;
+// }
 
 //return the build password
 // return "Hello I am the password placeholder :)";   
 
 // return "Password should go here";
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-// function generatePassword(a,b,c, d) {
-//   // uses the User choices to actually generate passwrod
-//   // var fullstring = a + b + c + d
-
-
-// }
-
-// gerneratePassword("cat", "hat", "bat", "mat");
-// //this is going to return  a string "cathatbatmat"
-
-
-
-}
-
+generateBtn.addEventListener("click", passwordText);
 
