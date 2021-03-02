@@ -18,7 +18,15 @@ var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"
 //Prompt user for password length
 var userPassLength = prompt("Pick a password length between 8 and 128 characters"); 
 
-// if (userPassLength >8 && userPassLength <128) {}
+// Verify password length is valid
+// although this works, it does not differentiate if userPassLength is valid between 8-128 -- could not figure this part out
+// var i = 0;
+// while (userPassLength < 8 || userPassLength > 128) {
+//   alert ("Your password length is not valid.");
+//   var userPassLength = prompt("Pick a password length between 8 and 128 characters");
+//   i++;
+// }
+
 
 // Using a confirm prompt the user for special characters
 
@@ -52,11 +60,11 @@ if (userUppercase === true) {
 if (userLowercase === true) {
   bigArrayOfPossibilities.push(userLowercase);
   }
-//Algo for password generation goes below
+//Algorithm for password generation goes below
 
 var generatePassword = bigArrayOfPossibilities[Math.floor(Math.random() * bigArrayOfPossibilities.length)];
 
-// run 
+// Run through to generate password based on password length chosen
 function generatePassword() {
 for(let i = 0; i < userPassLength.length; i++); 
 return password.slice(0, userPassLength);
@@ -64,15 +72,14 @@ return password.slice(0, userPassLength);
 // var writePassword = generatePassword;
 
 // Write password to the #password input
-// function writePassword() {
-  var passwordText = document.querySelector("#password")
+// function generatePassword() {
+  var passwordText = document.querySelector("#password");
+  console.log(password);
   passwordText.value = password;
 // }
 
-//return the build password
-// return "Hello I am the password placeholder :)";   
-
-// return "Password should go here";
 // Add event listener to generate button
-generateBtn.addEventListener("click", passwordText);
+generateBtn.addEventListener("click", password);
+
+
 
