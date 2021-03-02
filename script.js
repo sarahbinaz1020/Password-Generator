@@ -74,12 +74,12 @@ return password.slice(0, userPassLength);
 // Write password to the #password input
 // function generatePassword() {
   var passwordText = document.querySelector("#password");
-  console.log(password);
-  passwordText.value = password;
+  console.log(passwordText);
+  password.value = passwordText;
 // }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", password);
+generateBtn.addEventListener("click", passwordText);
 
 
 
